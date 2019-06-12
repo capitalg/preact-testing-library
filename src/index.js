@@ -1,5 +1,5 @@
 import {render as renderPReact, options} from 'preact'
-import {getQueriesForElement, prettyDOM} from 'dom-testing-library'
+import {getQueriesForElement, prettyDOM} from '@testing-library/dom'
 
 const mountedContainers = new Set()
 
@@ -54,6 +54,6 @@ function flushPromises() {
   return new Promise(resolve => setImmediate(resolve))
 }
 
-// just re-export everything from dom-testing-library
-export * from 'dom-testing-library'
+// just re-export everything from @testing-library/dom
+export * from '@testing-library/dom'
 export {render, cleanup, debounceRenderingOff, flushPromises}
